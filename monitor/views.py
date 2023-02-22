@@ -8,15 +8,19 @@ from rest_framework.parsers import MultiPartParser, JSONParser
 from PIL import Image
 from torchvision import transforms
 
-# Create your views here.
+#Handling POST request from client
 class UploadView(APIView):
     parser_classes = [JSONParser,MultiPartParser]
     @staticmethod
     def post(request):
         if request.method == 'POST':
+            #Using request.FILES to handle file transfer through POST request
             files = request.FILES.get('image')
+            #Defining ResNet model's object
             resnet = ResNetModelConfig.model
+            #Opening image using pillow
             input_image = Image.open(files)
+            #Basic preprocessing
             preprocess = transforms.Compose([
                 transforms.Resize(256),
                 transforms.CenterCrop(224),
