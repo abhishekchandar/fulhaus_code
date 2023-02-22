@@ -11,7 +11,7 @@
 
 - ``Github Actions`` for CI/CD: Employed CI/CD pipelines to test the code quality and the logic behind the functions developed. 
 
-## Instructions to interact with the classifier as an API
+## Instructions to interact with the classifier API
 - Clone the Github repository by running the command ``git clone https://github.com/abhishekchandar/fulhaus_code.git``
 - Open the local terminal as admin and navigate to the root directory of the project i.e. ``BASE_URL/fulhaus_code/`` 
 - Ensure that the Docker engine is running. In Windows, launch ``Docker Desktop`` application as admin to start the Docker daemon. 
