@@ -2,9 +2,13 @@
 
 ## Tools and technologies used:
 - ``ResNet``: Transfer learning is performed in which the last layer is unfrozen to change the num of outputs to 3 as opposed to the default value of 1000 since ResNet is trained to predict 1000 labels. Since the classification involved Chair, Sofa and Bed, ResNet was an interesting choice since the model is already pretrained on a vast number of household items. Since the dataset size is relaively smaller, data augmentation was performed and the smaller version of ResNet was employed to avoid overfitting. 
+
 - ``Django``: Backend framework using Python to develop an API wrapper for the ResNet model. Django provides mulitple advantanges such as enhanced security, sql database, framework for unit testing etc. out of the box. These are some of the reasons for choosing Django over Flask.
+
 - ``multipart encoding`` of Image for Inference: The image from the client is sent to the server through multipart encoding as it allows to handle images with large file sizes unlike Base64 encoding which resulted in lenghty text representation of images with file size <1MB.
+
 - ``Docker``: A lightway virtualization tool for easy reproducibity. The Django server is hosted in a Docker container which is able to self sustain on any platform without any dependency issues. Thanks to the Dockerfile - the recipe for building Docker images. 
+
 - ``Github Actions`` for CI/CD: Employed CI/CD pipelines to test the code quality and the logic behind the functions developed. 
 
 ## Instructions to interact with the classifier as an API
