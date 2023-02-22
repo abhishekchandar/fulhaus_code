@@ -19,6 +19,7 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
     - run: python -m pip install django
+    - run: python -m pip install djangorestframework
     - name: Build Docker image
       run: |
         docker build https://github.com/abhishekchandar/fulhaus_code.git#main -t docker-django1
