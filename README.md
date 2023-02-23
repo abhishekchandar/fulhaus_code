@@ -1,7 +1,7 @@
 # Image classification of furnitures using ResNet deep learning model
 
 ## Tools and technologies used:
-- ``ResNet``: Transfer learning is performed in which the last layer is unfrozen to change the num of outputs to 3 as opposed to the default value of 1000 since ResNet is trained to predict 1000 labels. Since the classification involved Chair, Sofa and Bed, ResNet was an interesting choice as the model is already pretrained on a vast number of household items. Since the dataset size is relaively smaller, data augmentation was performed and the smaller version of ResNet was employed to avoid overfitting. 
+- ``ResNet``: Transfer learning is performed in which the last layer is unfrozen to change the num of outputs to 3 as opposed to the default value of 1000 since ResNet is trained to predict 1000 labels. Since the classification involved Chair, Sofa and Bed, ResNet is a potential choice as the model is already pretrained on a vast number of household items. Since the dataset size is relaively smaller, data augmentation was performed and the smaller version of ResNet was employed to avoid overfitting. 
 
 - ``Django``: Backend framework using Python to develop an API wrapper for the ResNet model. Django provides mulitple advantanges such as enhanced security, sql database, framework for unit testing etc. out of the box. These are some of the reasons for choosing Django over Flask.
 
