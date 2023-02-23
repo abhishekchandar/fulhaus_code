@@ -16,7 +16,7 @@
 - Open the local terminal as admin and navigate to the root directory of the project i.e. ``BASE_URL/fulhaus_code/`` 
 - Ensure that the Docker engine is running. In Windows, launch ``Docker Desktop`` application as admin to start the Docker daemon. 
 - Build the Docker image using the Dockerfile by executing the following command: ``docker build . -t djangoapp``. NOTE, this command is executed in the directory where Dockerfile exists.
-- Once the above build process is complete, run the docker container by executing the following command: ``docker run -it -p 8000:8000 djangoapp``. 
+- Once the above build process is complete, run the docker container by executing the following command: ``docker run -it -p 8000:8000 djangoapp`` 
 - The Django server is now up and running. 
 
 ## Instructions to send an image for inference as a POST request to the server
